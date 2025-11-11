@@ -1,0 +1,51 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="./favicon.ico">
+  <title>CONTAFEST 4</title>
+
+  <!-- Tailwind CDN (fast prototype) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* ensure full-bleed dark bg (like your original #111827) */
+    html,body { height:100%; }
+  </style>
+</head>
+<body class="min-h-screen bg-[#111827] text-white antialiased">
+  <main class="flex min-h-screen items-center justify-center p-4">
+    <a href="/contafest4/lottery/">
+        <figure class="w-full max-w-3xl">
+          <picture>
+            <!-- If you have a compressed WebP (recommended), browser will use it -->
+            <source type="image/webp"
+                    srcset="
+                      ./assets/contafest4_logo-480.webp 480w,
+                      ./assets/contafest4_logo-800.webp 800w,
+                      ./assets/contafest4_logo-1280.webp 1280w
+                    "
+                    sizes="(max-width:640px) 80vw, (max-width:1024px) 60vw, 40vw" />
+            <!-- Fallback PNG/JPEG -->
+            <img
+              src="./assets/contafest4_logo-800.png"
+              srcset="
+                ./assets/contafest4_logo-480.png 480w,
+                ./assets/contafest4_logo-800.png 800w,
+                ./assets/contafest4_logo-1280.png 1280w
+              "
+              sizes="(max-width:640px) 80vw, (max-width:1024px) 60vw, 40vw"
+              alt="Contafest 4 logo"
+              class="mx-auto w-full h-auto max-w-[720px] sm:max-w-[880px] md:max-w-[1080px] drop-shadow-lg"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+          <figcaption class="sr-only">Contafest 4 logo</figcaption>
+        </figure>
+      </a>
+  </main>
+</body>
+</html>
